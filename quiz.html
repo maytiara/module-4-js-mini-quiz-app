@@ -30,19 +30,21 @@
         <!--Better way to center the card using bootstrap by adding that element d-flex & mx-auto-->
         <main class="card col-4 d-flex mx-auto" id="contLanding">
             <section class="card-body">
+                <!--Timer-->
                 <time style="font-size: 4rem; display: flex; justify-content: center;"> 00:00 </time>
-                <h5 class="card-title display-5 fw-bold font-monospace text-center">Question 1:</h5>
-                
-                <p class="card-text h5 text-center text-secondary">Stay tuned 🐢🐢</p>
+                <!--Question placeholder-->         
+                <p class="card-text h4 text-center text-secondary pt-5">Question 1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <!--Choices per question-->
                 <div class="d-grid gap-1 col-11 mx-auto">
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush" id="listOptions">
                         <li class="list-group-item"><i class="fa-solid fa-circle-arrow-right"></i> Option 1: To be continue</li>
                         <li class="list-group-item"><i class="fa-solid fa-circle-arrow-right"></i> Option 2: To be continue</li>
                         <li class="list-group-item"><i class="fa-solid fa-circle-arrow-right"></i> Option 3: To be continue</li>
-                        <li class="list-group-item"><i class="fa-solid fa-circle-arrow-right"></i> Option 4: Stay tuned 🐢🐢</li>
-                        <li class="list-group-item"><i class="fa-solid fa-circle-arrow-down"></i> If you want to continue, click the button below</li>
+                        <li class="list-group-item" id="answerStatus">Try Again! or Your awesome!</li>
+
                     </ul>
-                <a class="btn btn-dark btn-lg " id="letsGoBtn" type="button" href="quiz.html">PAUSE</a>
+                <!--Button for next question-->
+                <a class="btn btn-dark btn-lg" id="letsGoBtn" type="button" href="quiz.html">Next Question Please<i class="fa-solid fa-circle-arrow-right" style="margin-left: 1rem;"></i></a>
                 </div>
             </section>
         </main>
