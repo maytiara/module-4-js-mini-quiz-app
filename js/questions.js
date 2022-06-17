@@ -1,68 +1,69 @@
-var questions = [
+//from Sam's tutorial code //
+let questions = [
     {
-      title: "How are ya??????",
+      question: 'Why "Hello world" was the popular display output for programming language?',
       choices: [
         {
-          title: "Good",
+          title: 'Not sure why, how about Lorem Ipsum?',
           isAnswer: false,
         },
         {
-          title: "Bloody Goodyy",
-          isAnswer: false,
+          title: 'Because it is adaptable and traditional',
+          isAnswer: true,
         },
         {
-          title: "Hell Good",
+          title: 'hmmm.. Good question, Ask Siri or Alexa',
           isAnswer: true,
         },
       ],
     },
     {
-      title: "How are you doin?",
+      question: 'Which of the following choices that best describe an open-source css framework that nest to the index.html',
       choices: [
         {
-          title: "Good",
+          title: 'html5doctor.com',
           isAnswer: false,
         },
         {
-          title: "Bloody Good",
+          title: 'Bootstrap is a free & open-source',
+          isAnswer: true,
+        },
+        {
+          title: 'Autodesk Maya',
+          isAnswer: false,
+        },
+      ],
+    },
+    {
+      question: 'Who is Sam & James',
+      choices: [
+        {
+          title: 'Replica of Batman & Robin',
           isAnswer: false,
         },
         {
-          title: "Hell Good",
+          title: 'B1 and B2',
+          isAnswer: false,
+        },
+        {
+          title: 'None of the choices above. Instead, check them out in our bootcamp sessions',
           isAnswer: true,
         },
       ],
     },
     {
-      title: "How are ya goin?",
+      question: 'A non-profit website that allows you to go back in time and check the snapshot of each popular website in the past',
       choices: [
         {
-          title: "Good",
+          title: 'wwww.timemachine-maybe',
           isAnswer: false,
         },
         {
-          title: "Bloody Good",
+          title: 'www.ifyoucanturnbacktime.maybe',
           isAnswer: false,
         },
         {
-          title: "Hell Good",
-          isAnswer: true,
-        },
-      ],
-    },
-    {
-      title: "How are you mate?",
-      choices: [
-        {
-          title: "Good",
-          isAnswer: false,
-        },
-        {
-          title: "Bloody Good",
-          isAnswer: false,
-        },
-        {
-          title: "Hell Good",
+          title: 'https://archive.org/web/',
           isAnswer: true,
         },
       ],
