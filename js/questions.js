@@ -1,72 +1,43 @@
-//from Sam's tutorial code //
-let questions = [
-    {
-      title: 'Why "Hello world" was the popular display output for programming language?',
-      choices: [
-        {
-          title: 'Not sure why, how about Lorem Ipsum?',
-          isAnswer: false,
-        },
-        {
-          title: 'Because it is adaptable and traditional',
-          isAnswer: true,
-        },
-        {
-          title: 'hmmm.. Good question, Ask Siri or Alexa',
-          isAnswer: true,
-        },
-      ],
-    },
-    {
-      title: 'Which of the following choices that best describe an open-source css framework that nest to the index.html',
-      choices: [
-        {
-          title: 'html5doctor.com',
-          isAnswer: false,
-        },
-        {
-          title: 'Bootstrap is a free & open-source',
-          isAnswer: true,
-        },
-        {
-          title: 'Autodesk Maya',
-          isAnswer: false,
-        },
-      ],
-    },
-    {
-      title: 'Who is Sam & James',
-      choices: [
-        {
-          title: 'Replica of Batman & Robin',
-          isAnswer: false,
-        },
-        {
-          title: 'B1 and B2',
-          isAnswer: false,
-        },
-        {
-          title: 'None of the choices above. Instead, check them out in our bootcamp sessions',
-          isAnswer: true,
-        },
-      ],
-    },
-    {
-      title: 'A non-profit website that allows you to go back in time and check the snapshot of each popular website in the past',
-      choices: [
-        {
-          title: 'wwww.timemachine-maybe',
-          isAnswer: false,
-        },
-        {
-          title: 'www.ifyoucanturnbacktime.maybe',
-          isAnswer: false,
-        },
-        {
-          title: 'https://archive.org/web/',
-          isAnswer: true,
-        },
-      ],
-    },
-  ];
+const questions = [
+  {
+    id: 1,
+    title: 'Why "Hello world" was the popular display output for programming language?',
+    choices: [
+      'Not sure why, how about Lorem Ipsum?',
+      'Because it is adaptable and traditional',
+      'hmmm.. Good question, Ask Siri or Alexa',
+    ],
+    answer: 'Because it is adaptable and traditional'
+  },
+  {
+    id: 2,
+    title: 'Which of the following choices that best describe an open-source css framework that nest to the index.html',
+    choices: [
+      'html5doctor.com',
+      'Bootstrap is a free & open-source',
+      'Autodesk Maya',
+    ],
+    answer: 'Bootstrap is a free & open-source'
+  },
+  {
+    id: 3,
+    title: 'Who is Sam & James',
+    choices: [
+      'Replica of Batman & Robin',
+      'B1 and B2',
+      'None of the above. Instead, check them out in our bootcamp sessions',
+    ],
+    answer: 'None of the above. Instead, check them out in our bootcamp sessions'
+  },
+  {
+    id: 4,
+    title: 'A non-profit website that allows you to go back in time and check the snapshot of each popular website in the past',
+    choices: [
+      'wwww.timemachine-maybe',
+      'www.ifyoucanturnbacktime.maybe',
+      'https://archive.org/web/',
+    ],
+    answer: 'https://archive.org/web/'
+  },
+];
   
