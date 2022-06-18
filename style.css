@@ -103,7 +103,7 @@ li {
   font-weight: 600;
   font-size: 2rem;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 /*Placeholder for choices*/
@@ -122,6 +122,7 @@ li {
 #option3:hover {
   transition: all ease-in-out 0.2s;
   background-color: #4ca3b3;
+  cursor: help;
 }
 
 /*Button for index.html*/

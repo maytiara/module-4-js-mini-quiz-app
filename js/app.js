@@ -1,8 +1,23 @@
-//const questionTitleEl = document.getElementById('diffQuestions');
-//const questionChoices = document.getElementById('listOptions');
+var startGameButton = document.getElementById('letsGoBtnIndex');
+var questionTitleEl = document.getElementById('diffQuestions');
+var questionChoices = document.getElementById('listOptions');
+var nextButton = document.getElementById ('letsGoBtn');
+
+var feedbackEl = document.querySelector("#feedback");
+// used to keep track of which question we are on
+var questionNumber = 0; 
+
+//Values for choices --Idea: from the third party source
+var optionOneEl = document.getElementById("#option1");
+var optionTwoEl = document.getElementById("#option2");
+var optionThreeEl = document.getElementById("#option3");
+
+let timeRemaining = 120;
+//global variable to stop the action when you click the view highscore
+var timeInterval; 
 
 // Start Timer
-const minute = 01;
+const minute = 02;
 let time = minute * 60;
 
 const countdownEl = document.getElementById('sectiontimer');
@@ -20,9 +35,116 @@ function countdown () {
     time--;
   }
 
-  //seconds = seconds < 00 ? '00' + seconds : seconds;
-
 }
+
+//Display questions
+function randomQuestions(id) {
+  if (questionNumber < questions.length) {
+      questionTitleEl.textContent = questions[questionNumber].title;
+      optionOneEl.value = questions[questionNumber].choices[0];
+      optionTwoEl.value = questions[questionNumber].choices[1];
+      optionThreeEl.value = questions[questionNumber].choices[2];
+  }
+}
+
+//this clears the feedback to the user
+function clearResponse() {
+  feedbackEl.textContent = "";
+}
+
+//feedback for correct answer
+function correctResponse() {
+  feedbackEl.textContent = "You're Awesome";
+  setTimeout(clearResponse, 500);
+  questionNumber++;
+  showQuestion();
+}
+
+// feedback for wrong answer
+function wrongResponse() {
+  timeLeft = timeLeft - 10;
+  feedbackEl.textContent = "Try again";
+  setTimeout(clearResponse, 500);
+}
+
+// feedback for when the user response was incorrect
+function wrongResponse() {
+  timeLeft = timeLeft - 10;
+  feedbackEl.textContent = "wrong";
+  setTimeout(clearResponse, 500);
+}
+
+// event listener for option 1
+optionOneEl.addEventListener("click", function (event) {
+  event.preventDefault();
+  if (optionOneEl.value == questions[questionNumber].answer) {
+      correctResponse();
+  }
+  else {
+      wrongResponse();
+  }
+});
+
+// event listener for option 2
+optionTwoEl.addEventListener("click", function (event) {
+  event.preventDefault();
+  if (optionTwoEl.value === questions[questionNumber].answer) {
+      correctResponse();
+  }
+  else {
+      wrongResponse();
+  }
+});
+
+// event listener for option 3
+optionThreeEl.addEventListener("click", function (event) {
+  event.preventDefault();
+  if (optionThreeEl.value === questions[questionNumber].answer) {
+      correctResponse();
+  }
+  else {
+      wrongResponse();
+  }
+});
+
+//function to call the first question
+function startQuiz() {
+  questionNumber = 0;
+  timeLeft = 80;
+  score = 0;
+
+  showQuestion();
+
+  // time is decremented every second
+  timeInterval = setInterval(function () {
+      timeLeft--;
+      timeEl.textContent = "Time: " + timeLeft;
+
+      // when the time runs out or we are out of questions the game stops
+      if (timeLeft <= 0 || questionNumber >= questions.length) {
+          clearInterval(timeInterval);
+          gameOver();
+      }
+  }, 1000);
+}
+
+//Event listener for the Lets Go button @index.html
+startGameButton.addEventListener("click", function (event) {
+
+  startQuiz();
+});
+
+
+
+//Once the user click the Lets Go button it will start the 
+
+// display a question - starting with 1st question
+// elements in the questions page
+//const questionTitleEl = document.getElementById('diffQuestions'); // displays the question for the user 
+//const option1El = document.querySelector("#option1"); // first option in the question
+//const option2El = document.querySelector("#option2"); // second option in the question
+//const option3El = document.querySelector("#option3"); // third option for the question
+
 
 // Start Timer
 
@@ -74,81 +196,7 @@ function countdown () {
 //timer(80);
 
 
-// display a question - starting with 1st question
-function renderQuestion(questionIndex){
 
-    // get the question
-    const question = questions[questionIndex]
-  
-    // create the structure
-    // set the question title
-    questionTitleEl.textContent = question.title;
-  
-  
-    // set the choices
-    const choices = question.choices;
-    questionChoices.textContent = "";
-  
-    for (let index = 0; index < choices.length; index++) {
-      const choice = choices[index];
-  
-        // <li>
-        //   <button class="question-choice">Good</button>
-        // </li>;
-  
-      const li = document.createElement('li');
-  
-      const button = document.querySelector('.list-group-item');
-  
-  
-  
-      button.setAttribute('class', 'list-group-item');
-      button.textContent = choice.title;
-  
-  
-      button.addEventListener('click', function(event){
-        // question
-        // user click on choice
-  
-        // if user click on the correct answer
-        if(choice.isAnswer){
-          // give feedback correct
-  
-  
-  
-        }else{
-          // if user click on the wrong answer
-          // deduct 10 sec away from timer
-          timeRemaining = timeRemaining - 10;
-  
-          // show feedback -- wrong
-  
-        }
-        // if user click on the choice of the final question
-        const nextQuestionIndex = questionIndex + 1;
-  
-        if(nextQuestionIndex >= questions.length){
-          // end game
-          return endGame()
-        }
-  
-  
-        // move on to the next question
-        renderQuestion(nextQuestionIndex);
-        
-  
-  
-      });
-  
-  
-      li.appendChild(button);
-  
-      questionChoices.append(li);
-    }
-  
-  
-  
-}
 // handle question click - check whether the ans is correct or wrong
 
 // end the quiz and show highscores

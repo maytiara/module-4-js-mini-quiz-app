@@ -1,6 +1,5 @@
 const questions = [
   {
-    id: 1,
     title: 'Why "Hello world" was the popular display output for programming language?',
     choices: [
       'Not sure why, how about Lorem Ipsum?',
@@ -10,7 +9,6 @@ const questions = [
     answer: 'Because it is adaptable and traditional'
   },
   {
-    id: 2,
     title: 'Which of the following choices that best describe an open-source css framework that nest to the index.html',
     choices: [
       'html5doctor.com',
@@ -20,7 +18,6 @@ const questions = [
     answer: 'Bootstrap is a free & open-source'
   },
   {
-    id: 3,
     title: 'Who is Sam & James',
     choices: [
       'Replica of Batman & Robin',
@@ -30,7 +27,6 @@ const questions = [
     answer: 'None of the above. Instead, check them out in our bootcamp sessions'
   },
   {
-    id: 4,
     title: 'A non-profit website that allows you to go back in time and check the snapshot of each popular website in the past',
     choices: [
       'wwww.timemachine-maybe',
