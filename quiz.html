@@ -39,16 +39,15 @@
                 </section>
                 
                 <!--Question placeholder-->         
-                <p class="card-text h4 text-center text-secondary pt-5" id="diffQuestions"></p>
+                <section class="card-text h4 text-center text-secondary pt-5" id="diffQuestions"></section>
                 <!--Choices per question-->
                 <section class="d-grid gap-1 col-11 mx-auto">
-                    <ul class="list-group list-group-flush" id="listOptions">
-                        <li class="list-group-item"><i class="fa-solid fa-circle-arrow-right"></i> Option 1: To be continue</li>
-                        <li class="list-group-item"><i class="fa-solid fa-circle-arrow-right"></i> Option 2: To be continue</li>
-                        <li class="list-group-item"><i class="fa-solid fa-circle-arrow-right"></i> Option 3: To be continue</li>
-                        <li class="list-group-item" id="answerStatus">Try Again! or Your awesome!</li>
-
-                    </ul>
+                    <article class="list-group list-group-flush" id="listOptions">
+                        <input type="button" class="list-group-item" id="option1" value="">
+                        <input type="button" class="list-group-item" id="option2" value="">
+                        <input type="button" class="list-group-item" id="option3" value="">
+                        <p class="list-group-item2" id="feedback">Try Again! or Your awesome!</p>
+                    </article>
                 <!--Button for next question-->
                 <a class="btn btn-dark btn-lg" id="letsGoBtn" type="button" href="quiz.html">Next Question Please<i class="fa-solid fa-circle-arrow-right" style="margin-left: 1rem; margin-top: .35rem;"></i></a>
                 </section>

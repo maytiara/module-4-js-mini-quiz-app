@@ -67,12 +67,6 @@ li {
   width: 25rem;
 }
 
-.list-group-item {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
 /*top Buttons*/
 .homeB {
   background-color: none;
@@ -103,12 +97,31 @@ li {
 }
 
 /*Placeholder for answer status > quiz.html*/
-#answerStatus {
+#feedback {
   color: #e68200;
   font-family: 'Lexend', sans-serif;
   font-weight: 600;
   font-size: 2rem;
   text-align: center;
+  margin-top: 1rem;
+}
+
+/*Placeholder for choices*/
+#option1, #option2, #option3 {
+  background-color: #b0d3da;
+  height: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #161616;
+  margin: .25rem;
+}
+
+#option1:hover, 
+#option2:hover, 
+#option3:hover {
+  transition: all ease-in-out 0.2s;
+  background-color: #4ca3b3;
 }
 
 /*Button for index.html*/
@@ -130,7 +143,7 @@ li {
 
 /*Button for quiz.html*/
 #letsGoBtn {
-  margin-top: 20rem;
+  margin-top: 25rem;
   display: flex;
   position: absolute;
   justify-self: center;
