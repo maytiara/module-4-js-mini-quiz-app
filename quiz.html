@@ -21,21 +21,27 @@
     <header class="top-banner">
         <p><strong>Module 4</strong> | Web APIs Challenge: Quiz App
             <i class="fa-solid fa-house-user" type="button" id="iconH"></i>
-            <i class="fa-solid fa-arrow-right-from-bracket" type="button" title="See you on my next module 😉"  id="iconNext"></i>
+            <i class="fa-solid fa-arrow-right-from-bracket" type="button" title="See you on my next module 😉" id="iconNext"></i>
         </p>
     </header>
 
     <!--Practicing my Bootstrap Skills :-) // Main Section-->
     <section class="container-fluid p-5">
+
         <!--Better way to center the card using bootstrap by adding that element d-flex & mx-auto-->
         <main class="card col-4 d-flex mx-auto" id="contLanding">
             <section class="card-body">
+
                 <!--Timer-->
-                <time style="font-size: 4rem; display: flex; justify-content: center;"> 00:00 </time>
+                <section id="container-timer">
+                    <h2>Current time remaining:</h2>
+                    <div id="sectiontimer" style="font-size: 4rem; display: flex; justify-content: center;"></div>
+                </section>
+                
                 <!--Question placeholder-->         
-                <p class="card-text h4 text-center text-secondary pt-5">Question 1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p class="card-text h4 text-center text-secondary pt-5" id="diffQuestions"></p>
                 <!--Choices per question-->
-                <div class="d-grid gap-1 col-11 mx-auto">
+                <section class="d-grid gap-1 col-11 mx-auto">
                     <ul class="list-group list-group-flush" id="listOptions">
                         <li class="list-group-item"><i class="fa-solid fa-circle-arrow-right"></i> Option 1: To be continue</li>
                         <li class="list-group-item"><i class="fa-solid fa-circle-arrow-right"></i> Option 2: To be continue</li>
@@ -44,8 +50,8 @@
 
                     </ul>
                 <!--Button for next question-->
-                <a class="btn btn-dark btn-lg" id="letsGoBtn" type="button" href="quiz.html">Next Question Please<i class="fa-solid fa-circle-arrow-right" style="margin-left: 1rem;"></i></a>
-                </div>
+                <a class="btn btn-dark btn-lg" id="letsGoBtn" type="button" href="quiz.html">Next Question Please<i class="fa-solid fa-circle-arrow-right" style="margin-left: 1rem; margin-top: .35rem;"></i></a>
+                </section>
             </section>
         </main>
     </section>
@@ -61,5 +67,9 @@
             location.href = "/index.html";
         };
     </script>
+
+    <!--Developer Js-->
+    <script src="/js/app.js"></script>
+    <script src="/js/questions.js"></script>
 </body>
 </html>

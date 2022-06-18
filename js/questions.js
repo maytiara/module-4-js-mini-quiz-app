@@ -1,7 +1,7 @@
 //from Sam's tutorial code //
 let questions = [
     {
-      question: 'Why "Hello world" was the popular display output for programming language?',
+      title: 'Why "Hello world" was the popular display output for programming language?',
       choices: [
         {
           title: 'Not sure why, how about Lorem Ipsum?',
@@ -18,7 +18,7 @@ let questions = [
       ],
     },
     {
-      question: 'Which of the following choices that best describe an open-source css framework that nest to the index.html',
+      title: 'Which of the following choices that best describe an open-source css framework that nest to the index.html',
       choices: [
         {
           title: 'html5doctor.com',
@@ -35,7 +35,7 @@ let questions = [
       ],
     },
     {
-      question: 'Who is Sam & James',
+      title: 'Who is Sam & James',
       choices: [
         {
           title: 'Replica of Batman & Robin',
@@ -52,7 +52,7 @@ let questions = [
       ],
     },
     {
-      question: 'A non-profit website that allows you to go back in time and check the snapshot of each popular website in the past',
+      title: 'A non-profit website that allows you to go back in time and check the snapshot of each popular website in the past',
       choices: [
         {
           title: 'wwww.timemachine-maybe',

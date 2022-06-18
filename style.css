@@ -61,7 +61,7 @@ li {
 }
 
 #listOptions {
-  padding-top: 5rem;
+  padding-top: 3rem;
   display: flex;
   position: absolute;
   width: 25rem;
@@ -79,7 +79,7 @@ li {
 }
 
 
-/*Icons beside the Branding Statement*/
+/*Icons beside the Branding Statement > for index.html*/
 
 /*Home*/
 
@@ -102,7 +102,7 @@ li {
   color: #007185;
 }
 
-/*Placeholder for answer status*/
+/*Placeholder for answer status > quiz.html*/
 #answerStatus {
   color: #e68200;
   font-family: 'Lexend', sans-serif;
@@ -130,7 +130,7 @@ li {
 
 /*Button for quiz.html*/
 #letsGoBtn {
-  margin-top: 21rem;
+  margin-top: 20rem;
   display: flex;
   position: absolute;
   justify-self: center;
@@ -145,4 +145,13 @@ li {
   border-width: .25rem;
   border-color: white;
   transition: all ease-in-out 0.2s;
+}
+
+/*Section timer for quiz.html*/
+#container-timer h2 {
+  font-family: 'Lexend', sans-serif;
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.25rem;
 }
